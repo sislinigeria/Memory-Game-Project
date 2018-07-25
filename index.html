@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Matching Game</title>
     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
@@ -19,17 +20,21 @@
         	<ul class="stars">
         		<li><i class="fa fa-star"></i></li>
         		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span class="moves">3</span> Moves
+        	<span class="moves">0</span> Move (s)
 
-            <div class="restart">
+            <div class ="timer"></div>
+            
+            <div class="restart" onclick=startGame()>
         		<i class="fa fa-repeat"></i>
         	</div>
         </section>
 
-        <ul class="deck">
+        <ul class="deck" id="card-deck">
             <li class="card">
                 <i class="fa fa-diamond"></i>
             </li>
@@ -79,13 +84,28 @@
                 <i class="fa fa-cube"></i>
             </li>
         </ul>
+        <div id="popUp1" class="overlay">
+            <div class="popUp">
+                <h2>Congratulation!!!</h2>
+                <a class="close" href=#>x</a>
+                <div class="content-1">
+                    Congratulations, you're a winner!!!
+                </div>
+            </div>
+            <div class="content-2">
+                <p>You made <span id=finalMove></span> moves</p>
+                <p>in <span id=totalTime> </span> </p>
+                <p>Rating:  <span id=starRating></span></p>
+            </div>
+            <button id="play-again"onclick="playAgain()">Play Again!</button>
+        </div>
     </div>
 
     <script src="js/app.js"></script>
 </body>
 <footer>
     <hr>
-    <p>This work is in partial fulfilment of the Front-End Web Developer Nanodegree Program. 
+    <p>This work is my project in partial fulfilment of the Front-End Web Developer Nanodegree Program. 
         <br>
     JavaScript Functionality coded by <strong>Sixtus Nnamdi</strong> (+2349080003016)</p>
 </footer>
