@@ -334,6 +334,12 @@ h1 {
         padding: 20px;
         align-content: center;
     }
+
+    .instruction-board img{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
 }
 
 
@@ -385,4 +391,10 @@ footer {
 .instruction-board{
     text-align: justify;
     Width: 75%;
+}
+
+.instruction-board img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
