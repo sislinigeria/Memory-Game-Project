@@ -20,7 +20,7 @@ body {
     background: #fff url('../img/geometry2.png'); 
     /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .container {
@@ -32,7 +32,6 @@ body {
 
 h1 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
 }
 
 /*
@@ -58,7 +57,7 @@ h1 {
     margin: 0.2rem 0.2rem;
     background: #2e3d49;
     font-size: 0;
-    color: #fff;
+    color: #fff; /* Using short hand of HEX color */
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -71,10 +70,10 @@ h1 {
     transform: rotateY(0);
     background: #02b3e4;
     cursor: default;
-    animation-name: fadeIn;
-    animation-duration: 0.75s;
+    animation-name: fadeInY;
     -webkit-backface-visibility: visible !important;
     backface-visibility: visible !important;
+    animation-duration: .75s;
 }
 
 .deck .card.show {
@@ -86,22 +85,22 @@ h1 {
     background: #ffa07a;
     font-size: 33px;
     animation-name: rubberBand;
-    animation-duration: 0.75s;
     -webkit-backface-visibility: visible !important;
     backface-visibility: visible !important;
+    animation-duration: .75s;
 }
 
 .deck .card.unmatched {
     background: #aa7ecd;
     animation-name: pulse;
-    animation-duration: 0.75s;
+    animation-duration: .75s;
     -webkit-backface-visibility: visible !important;
     backface-visibility: visible !important;
 }
 
 .deck .card.disabled {
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 /*
  * Styles for the Score Panel
@@ -109,7 +108,6 @@ h1 {
 
 .score-panel {
     text-align: left;
-    width: 40%;
     margin-bottom: 10px;
 }
 
@@ -123,7 +121,6 @@ h1 {
 .score-panel .stars li {
     list-style: none;
     display: inline-block;
-    color: #daa520;
 }
 
 .score-panel .restart {
@@ -132,7 +129,7 @@ h1 {
 }
 
 .fa-star {
-    color: #ffa07a;
+    color: #daa520;
 }
 
 .timer {
@@ -141,19 +138,19 @@ h1 {
 }
 
 /*
-* Styles for the congratulation popup
+* Styles for the congratulation popup(modal)
 */
 
 .overlay {
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .overlay:target {
@@ -161,38 +158,39 @@ h1 {
     opacity: 1;
 }
 
-.popUp {
+.popup {
     position: relative;
-    width: 75%;
-    transition: all 5s ease-in;
+    width: 85%;
+    transition: all 5s ease-in-out;
     margin: 70px auto;
-    padding: 24px;
+    padding: 21px;
     background: #fff;
-    border-radius: 4.1px;
+    border-radius: 6px;
 }
 
-.popUp h2 {
+.popup h2 {
     margin-top: 0;
-    color: #ffa07a;
+    color: #fcdacd;
     font-family:  Helvetica, Arial, sans-serif;
 }
 
-.popUp .close {
+.popup .close {
     position: absolute;
-    color: #2e3d49;
     top: 20px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
+    font-weight: bold;
     text-decoration: none;
+    color: #fcdacd;
 }
 
-.popUp .close:hover {
+.popup .close:hover {
     color: #aa7ecd;
-    font-weight:bold;
 }
 
-.popUp .content-1, .content-2 {
+.popup .content-1,
+.content-2 {
     max-height: 30%;
     overflow: auto;
     text-align: center;
@@ -208,70 +206,18 @@ h1 {
 }
 
 #play-again {
-    border-radius: 5px;
+    background-color: #141214;
     color: #fff;
     width: 50%;
-    background-color: #141214;
     display: block;
     margin: 0 auto;
-    padding: 0.8rem 1.1rem;
-    font-size: 1.1rem,
+    padding: 0.7rem 1.1rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
 }
 /*
-* Styles for the footer
+*animations
 */
-
-footer {
-    text-align: center;
-    background-color: #aa7ecd;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-/*
-* View port for larger screens
-*/
-
-@media screen and (min-width: 768px){
-    .container {
-        font-size: 20px;
-    }
-
-    .deck {
-        width:560px;
-        height: 580px;
-    }
-
-    .deck .card {
-        height: 100px;
-        width: 100px;
-    }
-
-    .popUp {
-        width: 60%;
-    }
-}
-
-/*
-* View port for smaller screens
-*/
-
-@media screen and (max-width: 320px){
-    .deck{
-        width:85%;
-    }
-
-    .deck .card {
-        width: 4.7rem;
-        height: 4.7rem;
-    }
-}
-
-/*
-*animations*
 
 @keyframes flipInY {
 	from {
@@ -343,4 +289,54 @@ footer {
 	}
 }
 
+
+/*
+* View port for larger screens
 */
+
+@media screen and (min-width: 768px){
+    .container {
+        font-size: 21px;
+    }
+
+    .deck {
+        width:560px;
+        height: 580px;
+    }
+
+    .deck .card {
+        height: 100px;
+        width: 100px;
+    }
+
+    .popUp {
+        width: 60%;
+    }
+}
+
+/*
+* View port for smaller screens
+*/
+
+@media screen and (max-width: 320px){
+    .deck{
+        width:85%;
+    }
+
+    .deck .card {
+        width: 4.7rem;
+        height: 4.7rem;
+    }
+}
+
+
+/*
+* Styles for the footer
+*/
+
+footer {
+    text-align: center;
+    background-color: #aa7ecd;
+    width: 100%;
+    position: static;
+}
