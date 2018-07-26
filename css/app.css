@@ -160,7 +160,7 @@ h1 {
 
 .popup {
     position: relative;
-    width: 85%;
+    width: 50%;
     transition: all 5s ease-in-out;
     margin: 70px auto;
     padding: 21px;
@@ -170,8 +170,9 @@ h1 {
 
 .popup h2 {
     margin-top: 0;
-    color: #fcdacd;
+    color: #4b1f0d;
     font-family:  Helvetica, Arial, sans-serif;
+    text-align: center;
 }
 
 .popup .close {
@@ -182,7 +183,7 @@ h1 {
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #fcdacd;
+    color: #5f065b;
 }
 
 .popup .close:hover {
@@ -339,4 +340,20 @@ footer {
     background-color: #aa7ecd;
     width: 100%;
     position: static;
+}
+
+/*
+* Styles for button in instruction page
+*/
+.backToGame{
+    border: none;
+    box-shadow: 2px 4px;
+    color: #141214;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
 }
