@@ -16,7 +16,7 @@ To achieve this game, I had to breakdown the steps of the things i needed to do.
     * For this project, we were provided with a Shuffle function from http://stackoverflow.com/a/2450976
 * Game should have the ability to handle matched and unmatched cards
 * Each moves made should be displayed and calculated (i++)
-* There should be a star (at least 3) diplaying at the top of the page that reflects the player's performance based on total moves.
+* There should be a star (at least 3) displaying at the top of the page that reflects the player's performance based on total moves.
 * The display timer starts with the game and ends once all the cards have been matched.
 * Add restart button with the functionality to reset the star rating, timer and game board.
 * Once all the cards has been matched, a congratulation modal should pop up with the following content;
@@ -37,13 +37,13 @@ To Play, click [HERE](https://sislinigeria.github.io/Memory-Game-Project/)
 
 ## Contributing
 
-This repository is a copy of the master commit in Udacity repository as part of the project of FRONT END WEB NANODEGREE Program. It is a work of a beginner programmer and reviews are welcomed and should be directed [Here](mailto:sixtus.nnamdi@gmail.com). for details on how to contribute to the project --
+This repository is a copy of the master commit in Udacity repository as part of the project of FRONT END WEB NANODEGREE Program. It is a work of a beginner programmer and reviews are welcomed and should be directed [Here](mailto:sixtus.nnamdi@gmail.com). For details on how to contribute to the project --
 
 Check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Status
 
-This project is still being iterated from time to time. As i progress in my Nanodegree program, i will be implimenting new knowledge as the come.
+This project is still being iterated from time to time. As I progress in my Nanodegree program, I will be implementing new knowledge as the come.
 
 ## License
 
