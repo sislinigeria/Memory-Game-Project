@@ -32,7 +32,7 @@ The starter project was provided in a repo and has some HTML and CSS styling to 
 
 ## Installation
 
-This is a Browser based game and need no installation. Meanwhile, we noticed that the css styling and javascript codes are not functional in Microsoft Edge Browser. For optimal experience, open the game with Google Chrome or Mozilla Firefox browsers.
+This is a Browser based game and need no installation. Meanwhile, I noticed that the css styling and javascript codes are not functional in Microsoft Edge Browser. For optimal experience, open the game with Google Chrome or Mozilla Firefox browsers.
 To Play, click [HERE](https://sislinigeria.github.io/Memory-Game-Project/)
 
 ## Contributing
