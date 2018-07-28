@@ -1,33 +1,52 @@
 /*
  * Create a list that holds all of your cards
  */
-//The cards array holds all cards
+
+/*
+ * The cards array holds all cards 
+ */
 let card = document.getElementsByClassName("card");
 let cards = [...card]
 
-//card deck of all game cards
+/*
+ * card deck of all game cards
+ */
 const deck = document.getElementById("card-deck");
 
-//declare move variable
+/*
+ * declaring the move variable
+ */
 let moves = 0;
 let counter = document.querySelector(".moves");
 
-//star icons variables
+/*
+ * star icons variables
+ */
 const stars = document.querySelectorAll(".fa-star");
 
-//matched cards variable declaration
+/*
+ * matched cards variable declaration
+ */
 let matchedCard = document.getElementsByClassName("match");
 
-//star list variable
+/*
+ * star list variable
+ */
 let starsList = document.querySelectorAll(".stars li");
 
-//close icon of the popUp congratulation
+/*
+ * close icon of the congratulation popup (Modal)
+ */
 let closeicon = document.querySelector(".close");
 
-//declare the popUp as modal Variable
+/*
+ * declare the popUp as modal Variable
+ */
 let modal = document.getElementById("popup1");
 
-//open cards array declaration
+/*
+ * open cards array declaration
+ */
 var openedCards = [];
 
 /*
@@ -37,7 +56,9 @@ var openedCards = [];
  *   - add each card's HTML to the page
  */
 
-// Shuffle function from http://stackoverflow.com/a/2450976
+/*
+ * Shuffle function from http://stackoverflow.com/a/2450976
+ */
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -52,10 +73,12 @@ function shuffle(array) {
     return array;
 };
 
-//When page is refreshed or load, card shuffles.
+/*
+ * When page is refreshed or load, card shuffles.
+ */
 document.body.onload = startGame();
 
-//starts a new play
+//starts a new play function
 function startGame(){
     //shuffle deck
     cards = shuffle(cards);
@@ -95,14 +118,18 @@ function startGame(){
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
 
- // when clicked, toggles open and show class/display cards
+/*
+ * when clicked, toggles open and show class/display cards
+ */
  var displayCard = function (){
      this.classList.toggle("open");
      this.classList.toggle("show");
      this.classList.toggle('disabled');
  };
 
- //check if cards matched
+/*
+ * check if cards matched
+ */
  function cardOpen () {
      openedCards.push(this);
      var len = openedCards.length;
@@ -116,7 +143,9 @@ function startGame(){
     }
 };
 
-//Action when cards match
+/*
+ * Action when cards match
+ */
 function matched(){
     openedCards[0].classList.add("match", "disabled");
     openedCards[1].classList.add("match", "disabled");
@@ -125,7 +154,9 @@ function matched(){
     openedCards = [];
 }
 
-// Action when cards didn't match
+/*
+ * Action when cards didn't match
+ */
 function unmatched(){
     openedCards[0].classList.add("unmatched");
     openedCards[1].classList.add("unmatched");
@@ -138,14 +169,18 @@ function unmatched(){
     },1100);
 }
 
-// Temporal disabling of cards
+/*
+ * Temporal disabling of cards
+ */
 function disable(){
     Array.prototype.filter.call(cards, function(card){
         card.classList.add("disabled");
     });
 }
 
-// Enabling and disabling of matched cards
+/*
+ * Enabling and disabling of matched cards
+ */
 function enable(){
     Array.prototype.filter.call(cards, function(card){
         card.classList.remove("disabled");
@@ -155,7 +190,9 @@ function enable(){
     });
 }
 
-//Player's moves and Timing
+/*
+ * Player's moves and Timing
+ */
 function moveCounter(){
     moves++;
     counter.innerHTML = moves;
@@ -182,7 +219,9 @@ function moveCounter(){
     }
 }
 
-// Timing of the Game
+/*
+ * Timing of the Game
+ */
 var second = 0, minute = 0; hour = 0;
 var timer = document.querySelector(".timer");
 var interval;
@@ -202,13 +241,13 @@ function startTimer(){
 }
 
 /*
-* Congratulation PopUp
-* Show modal
-* Show total moves
-* Show time and
-* Show Ratings
-* When all cards match.
-*/
+ * Congratulation PopUp
+ * Show modal
+ * Show total moves
+ * Show time and
+ * Show Ratings
+ * When all cards match.
+ */
 function congratulations(){
     if(matchedCard.length == 16){
         clearInterval(interval);
@@ -229,7 +268,9 @@ function congratulations(){
     };
 }
 
-//close icon on popup
+/*
+ * close icon on popup
+ */
 function closeModal(){
     closeicon.addEventListener("click", function(e){
         modal.classList.remove("show");
@@ -237,13 +278,17 @@ function closeModal(){
     });
 }
 
-//play again button
+/*
+ * play again button
+ */
 function playAgain(){
     modal.classList.remove("show");
     startGame();
 }
 
-//using for loop to add eventListener to each card
+/*
+ * using for loop to add eventListener
+ */
 for (var i = 0; i < cards.length; i++){
     card = cards[i];
     card.addEventListener("click", displayCard);
