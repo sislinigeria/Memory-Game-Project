@@ -287,7 +287,7 @@ function playAgain(){
 }
 
 /*
- * using for loop to add eventListener
+ * using for-loop to add eventListener
  */
 for (var i = 0; i < cards.length; i++){
     card = cards[i];

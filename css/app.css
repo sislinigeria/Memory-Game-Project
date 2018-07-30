@@ -57,7 +57,7 @@ h1 {
     margin: 0.2rem 0.2rem;
     background: #2e3d49;
     font-size: 0;
-    color: #fff; /* Using short hand of HEX color */
+    color: #fff;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -160,8 +160,7 @@ h1 {
 
 .popup {
     position: relative;
-    width: 50%;
-    transition: all 5s ease-in-out;
+    width: 54%;
     margin: 70px auto;
     padding: 21px;
     background: #fff;
@@ -209,7 +208,7 @@ h1 {
 #play-again {
     background-color: #141214;
     color: #fff;
-    width: 50%;
+    width: 30%;
     display: block;
     margin: 0 auto;
     padding: 0.7rem 1.1rem;
@@ -311,7 +310,7 @@ h1 {
     }
 
     .popup {
-        width: 75%;
+        width: 54%;
     }
 }
 

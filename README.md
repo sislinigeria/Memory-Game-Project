@@ -8,6 +8,7 @@
 * [Contributing](#contributing)
 * [Status](#status)
 * [License](#license)
+* [Credit](#credit)
 
 ## Requirements
 
@@ -54,3 +55,18 @@ As part of Udacity Honor code, your submissions must be your own work, hence sub
 Me, the author of the project (*basically, the HTML structure was provided, I only modified the HTML, Re-Style the CSS and Code the JavaScript*), allow you to check the code as a reference, but if you submit it, it's your own responsibility if you get expelled.
 
 Besides the above notice, the following license applies and this license notice must be included in all works derived from this project. - ![Creative Commons](https://openaid.se/wp-content/uploads/2015/03/pdm-cc0-.png)
+
+##  Credit
+
+Credit to this work goes to
+* Udacity
+* Google
+* [w3school Documentation](https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp)
+* [Stack Overflow](http://stackoverflow.com/a/2450976)
+* Youtube Videos from;
+    * [Adam Khoury](https://www.youtube.com/user/flashbuilding)
+    * [Ben Cunnnigham](https://www.youtube.com/channel/UCN1TEqvPo98x-8A7OXfzhzw)
+    * [Michael Ritter](https://www.youtube.com/watch?v=9pKSHLokQEA)
+* [Codecademy](https://www.codecademy.com)
+* [CSS Tricks](https://css-tricks.com/)
+* [MDN Web Documentation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
